@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvAvailable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List Of Available Devices:"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:textStyle="bold"/>
+    <view
+        class="androidx.recyclerview.widget.RecyclerView"
+        android:id="@+id/viewAvailable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAvailable"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:scrollbars="vertical">
+    </view>
+    <TextView
+        android:id="@+id/tvPaired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewAvailable"
+        android:text="List Of Paired Device:"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"/>
+    <view class="androidx.recyclerview.widget.RecyclerView"
+        android:id="@+id/viewPaired"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPaired"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:scrollbars="vertical">
+    </view>
+</RelativeLayout>
